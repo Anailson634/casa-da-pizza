@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Casa da pizza</title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <h1>Casa da pizza</h1>
+            <!--<img src="Pizzas/logo.png" alt="logo" id="logo">-->
+        </div>
+    </header>
+    <input id="Enviar_pedidos_central" type="button" value="enviar">
+    <main id="catalogo">
+        <h2 id="h2-tradicionais">Tradicionais</h2>
+        <div class="tradicionais-catalago">
+
+        </div>
+        <h2 id="h2-especiais">Especiais</h2>
+        <div class="especiais-catalago">
+        </div>
+    </main>
+    <!--<footer><a href="https://wa.me/5575999747065" target="_blank">WhatsApp</a></footer>-->
+
+    <script src="scripts/carregar_pizzas.js"></script>
+    <script src="scripts/enviar_pedido.js"></script>
+    <script>
+        var catalago1=true;
+        document.querySelector("#h2-tradicionais").addEventListener("click", ()=>{
+            let divCatalago = document.querySelector(".tradicionais-catalago")
+            if (catalago1){
+                divCatalago.style.display="none"
+                catalago1=false
+            } else {
+                divCatalago.style.display="flex"
+                catalago1=true
+            }
+        })
+    </script>
+</body>
+</html>

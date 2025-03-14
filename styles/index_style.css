@@ -1,0 +1,92 @@
+@media only screen and (min-width: 100px) {
+    #logo-container h1 {
+        font-size: 3.5rem;
+    
+    } .tradicionais-catalago {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+} @media only screen and (min-width: 100px) {
+    .tradicionais-catalago {
+        width: 100%;
+    }
+}
+
+
+:root {
+    background-color: #47eb4741;
+    --bege-claro: #f3e1ca;
+    --marrom-escuro: #4d311f;
+    --terracota: #c74f1c;
+    --verde-oliva: #6B8E23;
+    --fundo-bege: #dad2c8;
+    --marrom: #5A3E2B;
+}
+body {
+    background-color: var(--fundo-bege);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    background-color: var(--marrom-escuro);
+    
+} #logo-container {
+    color: var(--bege-claro);
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizza {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px;
+    height: 30px;
+    width: 220px;
+    border: 2px solid;
+    border-radius: 4px;
+    transition: 0.5s;
+} .pizza > h4 {
+    color: var(--terracota);
+    margin: 0;
+    height: 20px;
+} .informacoes-pizza {
+    text-align: center;
+} .informacoes-pizza > p{
+    margin: 7px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} .informacoes-pizza > input {
+    width: 90%;
+    background-color: #e26f3efb;
+    color: white;
+    border: none;
+    height: 25px;
+    border-radius: 3px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content :center; 
+}
+
+
+.tradicionais-catalago, .especiais-catalago{
+    transition: 0.5;
+} 

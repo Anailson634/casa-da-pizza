@@ -17,7 +17,7 @@
 
 
 :root {
-    background-color: #47eb4741;
+    background-color: #ffffff00;
     --bege-claro: #f3e1ca;
     --marrom-escuro: #4d311f;
     --terracota: #c74f1c;
@@ -34,7 +34,9 @@ body {
 
 
 header {
+    user-select: none;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 190px;
@@ -48,45 +50,96 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+} .menu-catalago {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    color: var(--bege-claro);
+    font-weight: bold;
+    font-size: 0.8rem;
+} .menu-catalago > div  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: 0.4s;
 }
 
-.pizza {
-    background-color: white;
+
+/* Estilos dos Cards */
+.menu {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 3px;
-    height: 30px;
-    width: 220px;
-    border: 2px solid;
-    border-radius: 4px;
-    transition: 0.5s;
-} .pizza > h4 {
-    color: var(--terracota);
-    margin: 0;
-    height: 20px;
-} .informacoes-pizza {
-    text-align: center;
-} .informacoes-pizza > p{
-    margin: 7px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} .informacoes-pizza > input {
-    width: 90%;
-    background-color: #e26f3efb;
-    color: white;
-    border: none;
-    height: 25px;
-    border-radius: 3px;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
 }
-main {
+
+.card {
+    user-select: none;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content :center; 
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 4px;
+    width: 360px;
+    height: 85px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Círculo colorido na esquerda */
+.card-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(217, 121, 80, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card:hover .card-circle {
+    background: rgba(217, 121, 80, 1);
+}
+
+/* Informações da pizza */
+.card-info {
+    flex: 1;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5A3E2B;
+}
+
+.card p {
+    margin: 3px 0 0;
+    font-size: 0.8rem;
+    color: #8B5A2B;
 }
 
 
 .tradicionais-catalago, .especiais-catalago{
-    transition: 0.5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 } 

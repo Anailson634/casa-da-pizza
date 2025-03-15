@@ -9,39 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <title>Casa da pizza</title>
 </head>
-<body>
+<body onload="desaparecer('.tradicionais-catalago','menu-tradicionais')">
     <header>
         <div id="logo-container">
             <h1>Casa da pizza</h1>
             <!--<img src="Pizzas/logo.png" alt="logo" id="logo">-->
         </div>
+        <div class="menu-catalago">
+            <div onclick="desaparecer('.tradicionais-catalago','menu-tradicionais')" id="menu-tradicionais">Tradicionais</div>
+            <div onclick="desaparecer('.especiais-catalago', 'menu-especiais')" id="menu-especiais">Especiais</div>
+            <div onclick="desaparecer('.doces-catalago', 'menu-doces')" id="menu-doces">Doces</div>
+            <div onclick="desaparecer('.bebidas-catalago', 'menu-bebidas')" id="menu-bebidas">Bebidas</div>
+        </div>
     </header>
     <input id="Enviar_pedidos_central" type="button" value="enviar">
     <main id="catalogo">
-        <h2 id="h2-tradicionais">Tradicionais</h2>
-        <div class="tradicionais-catalago">
-
-        </div>
-        <h2 id="h2-especiais">Especiais</h2>
-        <div class="especiais-catalago">
-        </div>
+        <div class="tradicionais-catalago"></div>
+        <div class="especiais-catalago"></div>
+        <div class="doces-catalago"></div>
+        <div class="bebidas-catalago"></div>
     </main>
     <!--<footer><a href="https://wa.me/5575999747065" target="_blank">WhatsApp</a></footer>-->
 
     <script src="scripts/carregar_pizzas.js"></script>
     <script src="scripts/enviar_pedido.js"></script>
     <script>
-        var catalago1=true;
-        document.querySelector("#h2-tradicionais").addEventListener("click", ()=>{
-            let divCatalago = document.querySelector(".tradicionais-catalago")
-            if (catalago1){
-                divCatalago.style.display="none"
-                catalago1=false
-            } else {
-                divCatalago.style.display="flex"
-                catalago1=true
-            }
-        })
+    document.querySelector('.menu-tradicionais').style.backgroundColor='red'
+        function desaparecer(url_page, url_menu){
+            let item_flex=document.querySelector(url_page);
+            const elementos=[['.tradicionais-catalago','#menu-tradicionais'], ['.especiais-catalago', '#menu-especiais'],
+                ['.doces-catalago', '#menu-doces'], ['.bebidas-catalago', '#menu-bebidas']]
+            elementos.forEach(item =>{
+                let item_none=document.querySelector(item[0]);
+                let item_menu=document.querySelector(item[1]);
+                if (item[0]==url_page){
+                    item_flex.style.display="flex";
+                    item_menu.style.backgroundColor="#eea4722f";
+                } else {
+                    item_none.style.display="none";
+                    item_menu.style.backgroundColor="#ffffff00";
+                }
+            })
+        }
     </script>
 </body>
 </html>

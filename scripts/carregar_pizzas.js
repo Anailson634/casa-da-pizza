@@ -1,6 +1,6 @@
 var lista_pedidos={}
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('pizzas.json' , {
+    fetch('https://api-casa-da-pizza.onrender.com/pizzas' , {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json'

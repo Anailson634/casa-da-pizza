@@ -1,0 +1,17 @@
+.set-infos {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.borda-info, .radio-info{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+} .add_pizza{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  height: 30%;
+  width: 40%;
+}

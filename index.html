@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index_style.css">
+    <link rel="stylesheet" href="styles/flipCard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
@@ -24,7 +25,9 @@
     </header>
     <input id="Enviar_pedidos_central" type="button" value="enviar">
     <main id="catalogo">
-        <div class="tradicionais-catalago"></div>
+        <div class="tradicionais-catalago">
+
+        </div>
         <div class="especiais-catalago"></div>
         <div class="doces-catalago"></div>
         <div class="bebidas-catalago"></div>
@@ -33,24 +36,7 @@
 
     <script src="scripts/carregar_pizzas.js"></script>
     <script src="scripts/enviar_pedido.js"></script>
-    <script>
-    document.querySelector('.menu-tradicionais').style.backgroundColor='red'
-        function desaparecer(url_page, url_menu){
-            let item_flex=document.querySelector(url_page);
-            const elementos=[['.tradicionais-catalago','#menu-tradicionais'], ['.especiais-catalago', '#menu-especiais'],
-                ['.doces-catalago', '#menu-doces'], ['.bebidas-catalago', '#menu-bebidas']]
-            elementos.forEach(item =>{
-                let item_none=document.querySelector(item[0]);
-                let item_menu=document.querySelector(item[1]);
-                if (item[0]==url_page){
-                    item_flex.style.display="flex";
-                    item_menu.style.backgroundColor="#eea4722f";
-                } else {
-                    item_none.style.display="none";
-                    item_menu.style.backgroundColor="#ffffff00";
-                }
-            })
-        }
-    </script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/fliper.js"></script>
 </body>
 </html>

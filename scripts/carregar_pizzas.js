@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 });
 
-function criar_lista(data, divPai, bordasPizza, tamanhosPizza) {
+function criar_lista(data, divPai, bordasPizza=none, tamanhosPizza=none) {
     let main = document.querySelector(divPai);
     Object.entries(data).forEach(pizza => {
         let card=document.createElement("div");
@@ -33,6 +33,7 @@ function criar_lista(data, divPai, bordasPizza, tamanhosPizza) {
         let hInfo=document.createElement("h3");
         hInfo.textContent=pizza[0];
         let pInfo=document.createElement("p");
+        pInfo
         pInfo.textContent=pizza[1]["Detalhes"];
 
         //Card fundo
@@ -45,18 +46,20 @@ function criar_lista(data, divPai, bordasPizza, tamanhosPizza) {
         setInfos.style.display="flex";
         let radioInfo=document.createElement("div");
         radioInfo.classList.add("radio-info");
-        radioInfo.innerHTML="Tamanho";
+        let hRadio=document.createElement("h3");
+        hRadio.textContent="Tamanho";
 
         let bordaInfo=document.createElement("div");
         bordaInfo.classList.add("borda-info");
-
-        bordaInfo.innerHTML="Bordas";
+        
+        let hBorda=document.createElement("h3");
+        hBorda.textContent="Bordas";
         let selectBorda=document.createElement("select");
         selectBorda.name="borda";
         selectBorda.id="bordas";
         let option_nenhum=document.createElement("option");
         option_nenhum.innerHTML="Nenhum";
-
+        
         let addPizza=document.createElement("div");
         addPizza.classList.add("add_pizza");
         addPizza.innerHTML="Adicionar";
@@ -86,6 +89,7 @@ function criar_lista(data, divPai, bordasPizza, tamanhosPizza) {
 
         cardBack.appendChild(setInfos);
         setInfos.appendChild(radioInfo);
+        radioInfo.appendChild(hRadio);
         Object.entries(tamanhosPizza).forEach(tamanho_pizza => {
             let labelPizza=document.createElement("label");
             labelPizza.innerHTML=tamanho_pizza[0];
@@ -97,6 +101,7 @@ function criar_lista(data, divPai, bordasPizza, tamanhosPizza) {
             radioInfo.appendChild(labelPizza);
         })
         setInfos.appendChild(bordaInfo);
+        bordaInfo.appendChild(hBorda);
         bordaInfo.appendChild(selectBorda);
         selectBorda.appendChild(option_nenhum);
         bordasPizza.forEach(borda_pizza => {

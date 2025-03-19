@@ -11,7 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border-top: 1px solid #e49738;
+  border-bottom: 1px solid #e49738;
+  color: #513717;
   height: 30%;
   width: 40%;
+  box-shadow:  3px 3px 10px #8b451364;
 }
